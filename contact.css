@@ -37,6 +37,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .field {
@@ -138,8 +139,9 @@
 /* Media Queries for Mobile and Tablets */
 @media (max-width: 768px) {
     .contact-item {
-        flex-direction: column;
         align-items: flex-start;
+        flex-direction: row; /* Ensures horizontal layout on mobile */
+        justify-content: space-between;
         text-align: left; /* Ensures left-alignment on mobile */
     }
 

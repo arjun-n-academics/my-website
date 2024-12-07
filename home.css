@@ -43,8 +43,8 @@
 
 /* Enroll Now Button */
 #enroll-button {
-    background-color: #f1c232; /* Soft gold button */
-    color: #006f6d; /* Dark teal text for the button */
+    background-color: #006f6d; /* Soft gold button */
+    color: #fff; /* Dark teal text for the button */
     font-size: 18px;
     font-weight: 600;
     padding: 15px 30px;
@@ -58,8 +58,8 @@
 
 /* Enroll Button Hover */
 #enroll-button:hover {
-    background-color: #006f6d; /* Dark teal on hover */
-    color: #fff; /* White text on hover */
+    background-color: #f1c232; /* Dark teal on hover */
+    color: #006f6d; /* White text on hover */
     transform: scale(1.05); /* Slight scale-up for engagement */
 }
 

@@ -62,16 +62,15 @@
     color: white;
 }
 
-.copy-feedback {
-    color: #00ff00;
-    font-size: 16px;
-    margin-top: 5px;
-    display: none;
-}
-
 /* Map Section */
 .map-section {
     margin-top: 30px;
+}
+
+/* Button below the map */
+.map-button-section {
+    text-align: center;  /* Center the button */
+    margin-top: 20px;  /* Space between the map and the button */
 }
 
 button {
@@ -82,7 +81,6 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 button:hover {

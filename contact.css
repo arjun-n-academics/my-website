@@ -22,13 +22,13 @@
     max-width: 800px; /* Same width as the footer */
     margin: 0 auto 30px;  /* Centered with margin below */
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 18px; /* You can adjust the font size here */
 }
 
 /* Each Contact Item is displayed as a row */
 .contact-item {
     display: flex;
-    justify-content: flex-start; /* Align the content to the left */
+    justify-content: flex-start; /* Align content to the left */
     width: 100%;  /* Ensure full width for contact items */
     margin-bottom: 15px;
 }

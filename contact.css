@@ -95,3 +95,51 @@ button:hover {
     font-weight: 700;
     margin-bottom: 20px;
 }
+
+/* Media Queries for Mobile and Tablets */
+@media (max-width: 768px) {
+    /* Adjust Contact Info Box width */
+    .contact-info-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Reduce font size for better readability on mobile */
+    .contact-item p {
+        font-size: 16px;
+    }
+
+    /* Adjust button font size and spacing */
+    .copy-button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    /* Stack the contact items vertically */
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .contact-item p {
+        margin-bottom: 5px;
+    }
+
+    /* Adjust map size */
+    .map-section iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Adjust title size */
+    #Contact_Details {
+        font-size: 28px;
+    }
+
+    /* Adjust button size for mobile */
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}

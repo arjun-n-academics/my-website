@@ -35,12 +35,14 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* Align button to the right */
 }
 
 .contact-item p {
     font-size: 18px;
     color: #333;
     flex: 1; /* Let the text take up available space */
+    text-align: left; /* Align phone number text to the left */
 }
 
 .yellow {
@@ -120,6 +122,7 @@
     .contact-item {
         flex-direction: column;
         align-items: flex-start;
+        text-align: left; /* Ensures left-alignment on mobile */
     }
 
     .contact-info-box {
@@ -129,6 +132,10 @@
 
     .contact-item p {
         font-size: 16px;
+    }
+
+    .copy-button {
+        margin-left: auto; /* Ensure button is aligned to the right */
     }
 
     .map-section iframe {

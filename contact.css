@@ -64,13 +64,12 @@
 .map-section {
     margin-top: 30px;
     width: 100%;
-    display: flex;
-    justify-content: center; /* Centers the map on the page */
 }
 
+/* Google Map Embed */
 .map-section iframe {
-    width: 100%;  /* Ensure iframe is fully responsive */
-    max-width: 1000px;  /* Max width for large screens */
+    width: 100%;
+    max-width: 600px;
     height: 350px;
     border: 0;
 }
@@ -90,7 +89,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     width: 100%;  /* Full width on mobile */
-    box-sizing: border-box;  /* Ensures padding doesn't affect width */
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -138,26 +137,30 @@ button:hover {
     }
 }
 
-/* Media Query for Very Small Devices (Phones) */
-@media (max-width: 480px) {
-    /* Additional tweaks for very small screens */
-    .contact-details-section {
-        padding: 10px;
-        margin: 5px;
-    }
-
+/* Media Query for Larger Devices */
+@media (min-width: 769px) {
+    /* Adjust the map section and contact info box for large screens */
     .contact-info-box {
-        font-size: 14px;
-        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    /* Ensure the map iframe has a smaller height for very small devices */
+    .contact-item {
+        width: 45%;  /* Makes contact items take less space on large screens */
+        margin-bottom: 15px;
+    }
+
+    .map-section {
+        width: 50%;  /* Gives map 50% width on larger screens */
+        margin-left: 20px; /* Adds some spacing between the map and the information section */
+        float: right;  /* Keeps the map on the right side of the page */
+    }
+
+    /* Adjust iframe to take full width of its container */
     .map-section iframe {
-        height: 200px;
-    }
-
-    /* Adjust the buttons to be full-width and readable */
-    button {
-        font-size: 14px;
+        width: 100%;
+        height: 400px; /* Slightly taller for better visibility */
     }
 }
+

@@ -9,12 +9,12 @@
 /* Body and HTML setup */
 body, html {
     height: 100%; /* Ensures the body takes up full height */
-    background-color: #f1f1f1; /* Soft neutral gray background */
+    background-color: #f9f9f9; /* Lighter, cleaner background */
     display: flex;
     flex-direction: column; /* Makes the page layout vertical */
 }
 
-/* Main wrapper: Ensures content takes up all space without pushing footer inside */
+/* Main wrapper */
 #main-wrapper {
     display: flex;
     flex-direction: column;
@@ -23,91 +23,99 @@ body, html {
 
 /* Header */
 #main-header {
-    background-color: #006f6d; /* Deep teal for a more inviting and fresh look */
+    background-color: #006f6d; /* Deep teal for a fresh look */
     color: #fff; /* White text for contrast */
-    padding: 50px 20px; /* Spacious header with large padding */
+    padding: 60px 20px; /* More spacious header */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for more contrast */
     position: relative;
 }
 
 #header-title {
-    font-size: 48px;
+    font-size: 50px; /* Slightly larger title */
     font-weight: 700; /* Bold title */
+    letter-spacing: 1px; /* Tighten letter-spacing */
     margin-bottom: 10px;
-    letter-spacing: 2px; /* Letter spacing for modern style */
+    text-transform: uppercase; /* Make the title more impactful */
 }
 
 #header-tagline {
-    font-size: 22px;
-    font-weight: 400; /* Lighter weight for tagline */
-    color: #f1c232; /* Soft gold for a warm, welcoming look */
-    margin-bottom: 20px;
+    font-size: 24px; /* Slightly larger tagline */
+    font-weight: 300; /* Light weight for tagline */
+    color: #f1c232; /* Soft gold */
+    margin-bottom: 30px; /* Increase space between title and navigation */
 }
 
 /* Navigation */
 #main-nav {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 #main-nav a {
     text-decoration: none;
     color: #fff; /* White links */
     font-size: 18px;
-    font-weight: 600; /* Semi-bold text for clarity */
-    padding: 10px 20px;
+    font-weight: 600; /* Semi-bold text */
+    padding: 12px 24px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* Active and Hover States */
 #main-nav a:hover {
     background-color: #f1c232; /* Soft gold on hover */
     color: #006f6d; /* Dark teal text on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover for interaction */
+    transform: translateY(-3px); /* Slight hover lift effect */
 }
 
 #main-nav a.active {
     background-color: #f1c232; /* Active state background */
-    color: #006f6d; /* Dark teal text for active state */
+    color: #006f6d; /* Dark teal text */
     font-weight: 700;
 }
 
 /* Contact Section */
 .contact-details-section {
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: center;
+    font-size: 18px; /* Improve readability */
 }
 
 /* Contact Info Box */
 .contact-info-box {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
     margin-bottom: 30px;
 }
 
 .contact-item {
     display: flex;
-    align-items: left;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 600px; /* Limiting width for better layout */
-    padding: 10px 20px;
+    max-width: 700px; /* More space for the contact info */
+    padding: 15px 25px;
     background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated hover effect */
 }
 
 .contact-item p {
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
     flex: 1; /* Let the text take up available space */
 }
@@ -120,9 +128,9 @@ body, html {
     background-color: #006f6d; /* Deep teal background */
     color: #fff; /* White text */
     border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -136,15 +144,15 @@ body, html {
 .map-section {
     margin-bottom: 30px;
     width: 100%;
-    max-width: 600px; /* Same width as contact info box */
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .map-section iframe {
     width: 100%;
-    height: 350px;
+    height: 400px; /* Slightly taller map for better visibility */
     border: 0;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 /* Button for Viewing on Google Maps */
@@ -152,12 +160,12 @@ body, html {
     background-color: #f1c232; /* Soft gold */
     color: #006f6d;
     border: none;
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 14px 28px;
+    font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 20px;
+    transition: all 0.3s ease;
+    margin-top: 25px;
 }
 
 .map-button-section button:hover {
@@ -168,11 +176,11 @@ body, html {
 
 /* Footer */
 #footer {
-    background-color: #006f6d; /* Same as header for consistency */
+    background-color: #006f6d;
     color: #fff;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    padding: 25px;
+    font-size: 16px;
     position: relative; /* Allows footer to be positioned at the bottom of the page */
     width: 100%;
 }
@@ -182,39 +190,36 @@ body, html {
     font-weight: 400;
 }
 
-#Contact_Details{
-    font-size: 36px;
+/* Contact Title */
+#Contact_Details {
+    font-size: 40px;
     color: #006f6d; /* Deep teal for title */
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
-
 
 /* Media Queries for Mobile and Tablets */
 @media (max-width: 768px) {
     .contact-item {
         flex-direction: column;
         align-items: flex-start;
+        padding: 20px;
     }
 
     .contact-info-box {
-        padding: 20px;
         width: 100%;
+        padding: 20px;
     }
 
     .contact-item p {
-        font-size: 14px;
+        font-size: 16px; /* Slightly smaller text */
     }
 
     .map-section iframe {
-        height: 250px; /* Reduced height for smaller screens */
+        height: 300px; /* Reduced height for smaller screens */
     }
 
     .map-button-section button {
-        font-size: 14px; /* Smaller button text on mobile */
-    }
-
-    .contact-item {
-        padding: 15px;
+        font-size: 16px; /* Smaller button text on mobile */
     }
 }

@@ -29,14 +29,24 @@
     justify-content: space-between; /* Push the button to the right */
     width: 100%;  /* Ensure full width for contact items */
     margin-bottom: 15px;
+    align-items: center;  /* Align button with the text */
 }
 
-/* Ensure all contact items are aligned properly */
+.yellow {
+    color:#f1c232;
+}
+
+.contact-item p {
+    margin: 0;
+    padding-right: 10px;  /* Add space between label and content */
+}
+
+/* Fix to ensure all contact items are aligned properly */
 .contact-item span {
     flex-grow: 1; /* Ensure that span elements take up remaining space */
 }
 
-/* Styling the button to align with text */
+/* Contact Item Button Styling */
 .copy-button {
     background-color: #f1c232; /* Soft gold */
     color: #006f6d;
@@ -46,13 +56,18 @@
     cursor: pointer;
     font-size: 16px;
     margin-left: 10px;  /* Add space between text and button */
-    flex-shrink: 0; /* Prevent the button from shrinking */
 }
 
-/* Copy button hover effect */
 .copy-button:hover {
     background-color: #006f6d;
     color: white;
+}
+
+.copy-feedback {
+    color: #00ff00;
+    font-size: 16px;
+    margin-top: 5px;
+    display: none;
 }
 
 /* Map Section */

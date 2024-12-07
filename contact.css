@@ -184,7 +184,10 @@ body, html {
 }
 
 #Contact_Details{
-    
+    font-size: 36px;
+    color: #006f6d; /* Deep teal for title */
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 

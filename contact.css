@@ -66,17 +66,10 @@
 .map-section {
     margin-top: 30px;
     width: 100%;
-    max-width: 600px; /* Ensure the map width is consistent with the footer on small screens */
+    max-width: 600px; /* Ensure the map width is consistent with the footer */
+    margin: 0 auto;  /* Center the map */
 }
 
-/* Map Style */
-iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-}
-
-/* Button Styling */
 button {
     padding: 10px 20px;
     background-color: #006f6d;
@@ -118,7 +111,6 @@ button:hover {
 
 /* Media Queries for Mobile and Tablets */
 @media (max-width: 768px) {
-    /* Contact Section: Ensure the width matches footer */
     .contact-details-section {
         max-width: 100%;  /* Allow full width on mobile */
         padding: 10px;
@@ -130,29 +122,20 @@ button:hover {
     }
 
     .contact-item {
-        flex-direction: column;  /* Stack contact info and button vertically */
-        align-items: flex-start;  /* Align text and button to the left */
+        flex-direction: row;  /* Ensure horizontal layout */
+        justify-content: space-between;
+        align-items: center;  /* Align button and content horizontally */
         margin-bottom: 10px;
     }
 
-    .contact-item p {
-        margin-bottom: 10px; /* Add space between text and button on mobile */
-    }
-
     .copy-button {
-        margin-left: 0; /* Remove margin for mobile */
-        margin-top: 5px; /* Add space between text and button */
+        margin-left: 10px; /* Maintain space between text and button */
     }
 
-    /* Fix for Map: Ensure map is not wider than the footer */
+    /* Map Section */
     .map-section {
         width: 100%;
-        max-width: 100%; /* Ensure map fits within screen width */
-    }
-
-    iframe {
-        width: 100%;
-        height: 250px; /* Make the map smaller on mobile */
+        max-width: 600px;  /* Make sure the map is within the same width as footer */
     }
 
     button {

@@ -4,7 +4,7 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    max-width: 100%;
+    max-width: 100%;  /* Prevents overflow */
     width: 100%;
     box-sizing: border-box;
     text-align: center;
@@ -63,15 +63,14 @@
 /* Map Section */
 .map-section {
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    display: flex;
+    justify-content: center; /* Centers the map on the page */
 }
 
 .map-section iframe {
-    width: 100%; /* Ensure iframe takes full width of its container */
-    max-width: 600px; /* Maximum width of map */
+    width: 100%;  /* Ensure iframe is fully responsive */
+    max-width: 1000px;  /* Max width for large screens */
     height: 350px;
     border: 0;
 }
@@ -90,8 +89,8 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%; /* Full width on mobile */
-    box-sizing: border-box;
+    width: 100%;  /* Full width on mobile */
+    box-sizing: border-box;  /* Ensures padding doesn't affect width */
 }
 
 button:hover {
@@ -160,32 +159,5 @@ button:hover {
     /* Adjust the buttons to be full-width and readable */
     button {
         font-size: 14px;
-    }
-}
-
-/* Flexbox Container to Align Map and Info Together */
-.contact-details-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px; /* Space between the map and info box */
-    align-items: flex-start;
-}
-
-/* Make sure both map and contact info are equally responsive */
-.contact-details-container .contact-info-box,
-.contact-details-container .map-section {
-    flex: 1; /* Both will take equal space */
-}
-
-/* Ensuring the map and contact info don't exceed screen size */
-@media (max-width: 768px) {
-    .contact-details-container {
-        flex-direction: column; /* Stack map and info box vertically on mobile */
-    }
-
-    .contact-details-container .contact-info-box,
-    .contact-details-container .map-section {
-        width: 100%;  /* Ensure full width on small screens */
     }
 }

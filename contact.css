@@ -1,145 +1,110 @@
 /* Contact Details Section */
 .contact-details-section {
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    max-width: 600px; /* Set the max-width to match the footer and map */
-    text-align: center;
+margin: 40px auto;
+padding: 20px;
+background-color: #f9f9f9;
+border-radius: 10px;
+max-width: 800px;
+text-align: center;  /* Aligning everything to the left */
+    width: 100%;  /* Ensure it does not overflow */
 }
 
 /* Contact Information Box using Flexbox */
-.contact-info-box {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    background-color: #006f6d;  /* Deep teal background */
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;  /* Ensure it takes full width */
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-/* Each Contact Item is displayed as a row */
-.contact-item {
-    display: flex;
-    justify-content: space-between; /* Push the button to the right */
-    width: 100%;  /* Ensure full width for contact items */
-    margin-bottom: 15px;
-}
-
-/* Title Color for Contact Info */
-.yellow {
-    color:#f1c232;
-}
-
-.contact-item p {
-    margin: 0;
-    padding-right: 10px;  /* Add space between label and content */
+@@ -18,7 +17,7 @@
+color: #fff;
+padding: 20px;
+border-radius: 10px;
+    width: 100%;  /* Ensure it doesn't exceed the container's width */
+    width: 600px;  /* Same width as map */
+margin: 0 auto 30px;  /* Centered with margin below */
+box-sizing: border-box;
+font-size: 18px;
+@@ -32,12 +31,12 @@
+margin-bottom: 15px;
 }
 
 /* Fix to ensure all contact items are aligned properly */
+/* Ensure all contact items are aligned properly */
 .contact-item span {
-    flex-grow: 1; /* Ensure that span elements take up remaining space */
+flex-grow: 1; /* Ensure that span elements take up remaining space */
 }
 
 /* Contact Item Button Styling */
+/* Styling the button to align with text */
 .copy-button {
-    background-color: #f1c232; /* Soft gold */
-    color: #006f6d;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;  /* Add space between text and button */
+background-color: #f1c232; /* Soft gold */
+color: #006f6d;
+@@ -47,25 +46,18 @@
+cursor: pointer;
+font-size: 16px;
+margin-left: 10px;  /* Add space between text and button */
+    flex-shrink: 0; /* Prevent the button from shrinking */
 }
 
+/* Copy button hover effect */
 .copy-button:hover {
-    background-color: #006f6d;
-    color: white;
+background-color: #006f6d;
+color: white;
+}
+
+.copy-feedback {
+    color: #00ff00;
+    font-size: 16px;
+    margin-top: 5px;
+    display: none;
 }
 
 /* Map Section */
 .map-section {
-    margin-top: 30px;
-    width: 100%;  /* Ensure map does not exceed container width */
-    max-width: 600px; /* Match the width of the contact info */
+margin-top: 30px;
+    max-width: 100%;  /* Ensure the map fits within the container */
+    width: 100%;  /* Ensure it does not overflow */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #006f6d;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
+@@ -89,45 +81,3 @@
+font-weight: 700;
+margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #f1c232;  /* Soft gold on hover */
-}
-
-#Contact_Details {
-    font-size: 36px;
-    color: #006f6d; /* Deep teal for title */
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-/* Footer */
-#footer {
-    background-color: #006f6d; /* Same as header for consistency */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    position: relative;
-    width: 100%;
-    margin-top: 40px; /* Added some margin to avoid sticking to content */
-}
-
-#footer p {
-    margin: 0;
-    font-weight: 400;
-}
-
-/* Media Queries for Mobile and Tablets */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
+    /* Adjust the container width to fit within mobile screens */
     .contact-details-section {
-        max-width: 100%;  /* Allow full width on mobile */
-        padding: 10px;
+        max-width: 100%;
+        padding: 15px;
     }
 
     .contact-info-box {
         width: 100%;
-        padding: 10px;
+    }
+
+    .map-section iframe {
+        width: 100%; /* Make map full-width on mobile */
+        height: 200px; /* Adjust map height for better mobile view */
+    }
+
+    #Contact_Details {
+        font-size: 28px; /* Smaller title on mobile */
     }
 
     .contact-item {
-        flex-direction: row;  /* Keep items in a row for mobile view */
-        align-items: center;  /* Align items horizontally */
-        justify-content: space-between;  /* Keep button at the far right */
+        flex-direction: column; /* Stack contact details vertically on mobile */
+        align-items: flex-start; /* Align items to the left */
         margin-bottom: 10px;
     }
 
-    .copy-button {
-        margin-left: 10px; /* Ensure space between content and button */
+    .contact-item p {
+        font-size: 16px; /* Smaller text size for mobile */
     }
 
-    /* Map Section Adjustments for Mobile */
-    .map-section {
-        width: 100%;  /* Ensure map stays within container width */
-        max-width: 600px;  /* Match contact info width */
-        margin-top: 20px;  /* Some space between map and contact info */
+    .copy-button {
+        padding: 8px 15px; /* Adjust button padding for mobile */
+        font-size: 14px;
     }
 
     button {
-        font-size: 16px;
-        padding: 8px 15px;
+        font-size: 16px; /* Adjust button text size for mobile */
+        padding: 8px 15px; /* Adjust padding for mobile */
     }
 }

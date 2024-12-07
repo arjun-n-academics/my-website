@@ -98,7 +98,7 @@ body, html {
 .contact-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     width: 100%;
     max-width: 600px; /* Limiting width for better layout */
     padding: 10px 20px;

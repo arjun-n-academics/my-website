@@ -4,8 +4,8 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    max-width: 800px;
-    text-align: center;  /* Aligning everything to the left */
+    max-width: 600px; /* Set the max-width to match the footer and map */
+    text-align: center;
 }
 
 /* Contact Information Box using Flexbox */
@@ -17,8 +17,7 @@
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 600px;  /* Same width as map */
-    margin: 0 auto 30px;  /* Centered with margin below */
+    width: 100%;  /* Ensure it takes full width */
     box-sizing: border-box;
     font-size: 18px;
 }
@@ -29,9 +28,9 @@
     justify-content: space-between; /* Push the button to the right */
     width: 100%;  /* Ensure full width for contact items */
     margin-bottom: 15px;
-    align-items: center;  /* Align button with the text */
 }
 
+/* Title Color for Contact Info */
 .yellow {
     color:#f1c232;
 }
@@ -63,13 +62,6 @@
     color: white;
 }
 
-.copy-feedback {
-    color: #00ff00;
-    font-size: 16px;
-    margin-top: 5px;
-    display: none;
-}
-
 /* Map Section */
 .map-section {
     margin-top: 30px;
@@ -95,4 +87,50 @@ button:hover {
     color: #006f6d; /* Deep teal for title */
     font-weight: 700;
     margin-bottom: 20px;
+}
+
+/* Footer */
+#footer {
+    background-color: #006f6d; /* Same as header for consistency */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    margin-top: 40px; /* Added some margin to avoid sticking to content */
+}
+
+#footer p {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Media Queries for Mobile and Tablets */
+@media (max-width: 768px) {
+    .contact-details-section {
+        max-width: 100%;  /* Allow full width on mobile */
+        padding: 10px;
+    }
+
+    .contact-info-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact-item {
+        flex-direction: column;  /* Stack contact info and button vertically */
+        align-items: flex-start;  /* Align text and button to the left */
+        margin-bottom: 10px;
+    }
+
+    .copy-button {
+        margin-left: 0; /* Remove margin for mobile */
+        margin-top: 5px; /* Add space between text and button */
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
 }

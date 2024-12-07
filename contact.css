@@ -1,72 +1,9 @@
-/* Contact Details Section */
-.contact-details-section {
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    max-width: 800px;
-    text-align: center;
-}
-
-/* Contact Information Box using Flexbox */
-.contact-info-box {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    background-color: #006f6d;  /* Deep teal background */
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 600px;  /* Same width as map */
-    margin: 0 auto 30px;  /* Centered with margin below */
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-/* Each Contact Item is displayed as a row */
-.contact-item {
-    display: flex;
-    justify-content: space-between; /* Push the button to the right */
-    width: 100%;  /* Ensure full width for contact items */
-    margin-bottom: 15px;
-}
-
-.yellow {
-    color: #f1c232;
-}
-
-.contact-item p {
-    margin: 0;
-    padding-right: 10px;  /* Add space between label and content */
-}
-
-/* Fix to ensure all contact items are aligned properly */
-.contact-item span {
-    flex-grow: 1; /* Ensure that span elements take up remaining space */
-}
-
-/* Contact Item Button Styling */
-.copy-button {
-    background-color: #f1c232; /* Soft gold */
-    color: #006f6d;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;  /* Add space between text and button */
-}
-
-.copy-button:hover {
-    background-color: #006f6d;
-    color: white;
-}
-
 /* Map Section */
 .map-section {
     margin-top: 30px;
 }
 
+/* Button below the map */
 .map-button-section {
     text-align: center;  /* Center the button */
     margin-top: 20px;  /* Space between the map and the button */
@@ -84,11 +21,4 @@ button {
 
 button:hover {
     background-color: #f1c232;  /* Soft gold on hover */
-}
-
-#Contact_Details {
-    font-size: 36px;
-    color: #006f6d; /* Deep teal for title */
-    font-weight: 700;
-    margin-bottom: 20px;
 }

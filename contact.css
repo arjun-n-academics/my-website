@@ -66,10 +66,10 @@
     width: 100%;
 }
 
-/* Google Map Embed */
+/* Make sure the map iframe takes up the full width, and its max-width is consistent with the other content */
 .map-section iframe {
     width: 100%;
-    max-width: 600px;
+    max-width: 600px;  /* Keeps map within a max width limit on larger screens */
     height: 350px;
     border: 0;
 }
@@ -89,7 +89,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     width: 100%;  /* Full width on mobile */
-    box-sizing: border-box;
+    box-sizing: border-box;  /* Ensures padding doesn't affect width */
 }
 
 button:hover {
@@ -137,30 +137,27 @@ button:hover {
     }
 }
 
-/* Media Query for Larger Devices */
-@media (min-width: 769px) {
-    /* Adjust the map section and contact info box for large screens */
+/* Media Query for Very Small Devices (Phones) */
+@media (max-width: 480px) {
+    /* Additional tweaks for very small screens */
+    .contact-details-section {
+        padding: 10px;
+        margin: 5px;
+    }
+
     .contact-info-box {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        font-size: 14px;
+        padding: 10px;
     }
 
-    .contact-item {
-        width: 45%;  /* Makes contact items take less space on large screens */
-        margin-bottom: 15px;
-    }
-
-    .map-section {
-        width: 50%;  /* Gives map 50% width on larger screens */
-        margin-left: 20px; /* Adds some spacing between the map and the information section */
-        float: right;  /* Keeps the map on the right side of the page */
-    }
-
-    /* Adjust iframe to take full width of its container */
+    /* Ensure the map iframe has a smaller height for very small devices */
     .map-section iframe {
-        width: 100%;
-        height: 400px; /* Slightly taller for better visibility */
+        height: 200px;
+    }
+
+    /* Adjust the buttons to be full-width and readable */
+    button {
+        font-size: 14px;
     }
 }
 

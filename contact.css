@@ -65,28 +65,10 @@
 /* Map Section */
 .map-section {
     margin-top: 30px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #006f6d;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #f1c232;  /* Soft gold on hover */
-}
-
-#Contact_Details {
-    font-size: 36px;
-    color: #006f6d; /* Deep teal for title */
-    font-weight: 700;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;  /* Constrain the map width to match content */
+    height: 400px; /* Ensure map height is not too large */
+    margin: 0 auto; /* Center the map */
 }
 
 /* Footer */
@@ -132,5 +114,10 @@ button:hover {
     button {
         font-size: 16px;
         padding: 8px 15px;
+    }
+
+    .map-section {
+        max-width: 100%;  /* Ensure map width is constrained to match the content width */
+        height: auto; /* Adjust height on mobile */
     }
 }

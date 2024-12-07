@@ -102,8 +102,8 @@
 
 /* Button for Viewing on Google Maps */
 .map-button-section button {
-    background-color: #f1c232; /* Soft gold */
-    color: #006f6d;
+    background-color: #006f6d; /* Soft gold */
+    color: #fff;
     border: none;
     padding: 14px 30px;
     font-size: 18px;
@@ -114,8 +114,8 @@
 }
 
 .map-button-section button:hover {
-    background-color: #006f6d;
-    color: #fff;
+    background-color: #f1c232;
+    color: #006f6d;
     transform: scale(1.05);
 }
 

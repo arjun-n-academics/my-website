@@ -65,9 +65,8 @@
 /* Map Section */
 .map-section {
     margin-top: 30px;
-    width: 100%;
-    max-width: 600px; /* Ensure the map width is consistent with the footer */
-    margin: 0 auto;  /* Center the map */
+    width: 100%;  /* Ensure map does not exceed container width */
+    max-width: 600px; /* Match the width of the contact info */
 }
 
 button {
@@ -122,20 +121,21 @@ button:hover {
     }
 
     .contact-item {
-        flex-direction: row;  /* Ensure horizontal layout */
-        justify-content: space-between;
-        align-items: center;  /* Align button and content horizontally */
+        flex-direction: row;  /* Keep items in a row for mobile view */
+        align-items: center;  /* Align items horizontally */
+        justify-content: space-between;  /* Keep button at the far right */
         margin-bottom: 10px;
     }
 
     .copy-button {
-        margin-left: 10px; /* Maintain space between text and button */
+        margin-left: 10px; /* Ensure space between content and button */
     }
 
-    /* Map Section */
+    /* Map Section Adjustments for Mobile */
     .map-section {
-        width: 100%;
-        max-width: 600px;  /* Make sure the map is within the same width as footer */
+        width: 100%;  /* Ensure map stays within container width */
+        max-width: 600px;  /* Match contact info width */
+        margin-top: 20px;  /* Some space between map and contact info */
     }
 
     button {

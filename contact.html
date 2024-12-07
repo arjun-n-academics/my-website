@@ -22,23 +22,42 @@
     <section class="contact-details-section">
         <h1 id="Contact_Details">Contact Details</h1>
 
-        <!-- Contact Information Box using Flexbox -->
+        <!-- Contact Information Box -->
         <div class="contact-info-box">
             <div class="contact-item">
-                <p><strong class="yellow">Phone:</strong> <span id="phone-number">+91 123 456 7890</span></p>
-                <button class="copy-button" id="copy-phone" onclick="copyToClipboard('phone-number', 'copy-phone')">Copy</button>
+                <div class="field">
+                    <p><strong class="yellow">Phone:</strong></p>
+                </div>
+                <div class="details">
+                    <p id="phone-number">+91 123 456 7890</p>
+                </div>
+                <div class="button">
+                    <button class="copy-button" id="copy-phone" onclick="copyToClipboard('phone-number', 'copy-phone')">Copy</button>
+                </div>
             </div>
 
             <div class="contact-item">
-                <p><strong class="yellow">Email:</strong> <span id="email-address">contact@aravindtuition.com</span></p>
-                <button class="copy-button" id="copy-email" onclick="copyToClipboard('email-address', 'copy-email')">Copy</button>
+                <div class="field">
+                    <p><strong class="yellow">Email:</strong></p>
+                </div>
+                <div class="details">
+                    <p id="email-address">contact@aravindtuition.com</p>
+                </div>
+                <div class="button">
+                    <button class="copy-button" id="copy-email" onclick="copyToClipboard('email-address', 'copy-email')">Copy</button>
+                </div>
             </div>
 
             <div class="contact-item">
-                <p><strong class="yellow">Location:</strong> 
-                    <span id="location">Aravind Tuition Center, 1234 Education Road, Coimbatore, Tamil Nadu</span>
-                </p>
-                <button class="copy-button" id="copy-location" onclick="copyToClipboard('location', 'copy-location')">Copy</button>
+                <div class="field">
+                    <p><strong class="yellow">Location:</strong></p>
+                </div>
+                <div class="details">
+                    <p id="location">Aravind Tuition Center, 1234 Education Road, Coimbatore, Tamil Nadu</p>
+                </div>
+                <div class="button">
+                    <button class="copy-button" id="copy-location" onclick="copyToClipboard('location', 'copy-location')">Copy</button>
+                </div>
             </div>
         </div>
 

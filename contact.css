@@ -5,7 +5,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     max-width: 800px;
-    text-align: center;  /* Aligning everything to the left */
+    text-align: center;
 }
 
 /* Contact Information Box using Flexbox */
@@ -62,19 +62,11 @@
     color: white;
 }
 
-.copy-feedback {
-    color: #00ff00;
-    font-size: 16px;
-    margin-top: 5px;
-    display: none;
-}
-
 /* Map Section */
 .map-section {
     margin-top: 30px;
 }
 
-/* Button below the map */
 .map-button-section {
     text-align: center;  /* Center the button */
     margin-top: 20px;  /* Space between the map and the button */
@@ -94,26 +86,9 @@ button:hover {
     background-color: #f1c232;  /* Soft gold on hover */
 }
 
-/* Contact Details Title */
 #Contact_Details {
     font-size: 36px;
     color: #006f6d; /* Deep teal for title */
     font-weight: 700;
     margin-bottom: 20px;
-}
-
-/* Footer */
-#footer {
-    margin-top: 40px;
-    text-align: center;
-    background-color: #006f6d;
-    color: white;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-#footer p {
-    margin: 0;
 }

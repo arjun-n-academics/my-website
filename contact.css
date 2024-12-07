@@ -14,7 +14,7 @@ body, html {
     flex-direction: column; /* Makes the page layout vertical */
 }
 
-/* Main wrapper */
+/* Main wrapper: Ensures content takes up all space without pushing footer inside */
 #main-wrapper {
     display: flex;
     flex-direction: column;
@@ -75,23 +75,15 @@ body, html {
     font-weight: 700;
 }
 
-/* Container for Contact Section */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
+/* Contact Section */
+.contact-details-section {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-.contact-details-section {
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Contact Info Box */
@@ -99,78 +91,80 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-/* Contact Item */
 .contact-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 600px; /* Limiting width for better layout */
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-item p {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
-    line-height: 1.6;
+    flex: 1; /* Let the text take up available space */
 }
 
-/* Yellow text for labels */
 .yellow {
-    color: #f1c232; /* Soft gold color */
+    color: #f1c232; /* Soft gold color for labels */
 }
 
-/* Copy Button */
 .copy-button {
-    background-color: #006f6d;
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 20px;
+    background-color: #006f6d; /* Deep teal background */
+    color: #fff; /* White text */
     border: none;
+    padding: 10px 20px;
+    font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .copy-button:hover {
-    background-color: #f1c232;
+    background-color: #f1c232; /* Soft gold on hover */
     color: #006f6d;
-}
-
-.copy-button:active {
-    transform: scale(0.98);
 }
 
 /* Map Section */
 .map-section {
-    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px; /* Same width as contact info box */
+    margin: 0 auto;
 }
 
 .map-section iframe {
     width: 100%;
-    height: 400px;
+    height: 350px;
     border: 0;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
-.map-button-section {
-    margin-top: 20px;
-    text-align: center;
-}
-
+/* Button for Viewing on Google Maps */
 .map-button-section button {
-    background-color: #006f6d;
-    color: #fff;
-    font-size: 16px;
-    padding: 12px 30px;
+    background-color: #f1c232; /* Soft gold */
+    color: #006f6d;
     border: none;
+    padding: 12px 24px;
+    font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
 }
 
 .map-button-section button:hover {
-    background-color: #f1c232;
-    color: #006f6d;
+    background-color: #006f6d;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -191,46 +185,29 @@ body, html {
 
 /* Media Queries for Mobile and Tablets */
 @media (max-width: 768px) {
-    /* Header */
-    #header-title {
-        font-size: 36px;
-    }
-
-    #header-tagline {
-        font-size: 18px;
-    }
-
-    /* Navigation */
-    #main-nav {
-        flex-direction: column;
-    }
-
-    #main-nav a {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    /* Contact Info */
-    .contact-info-box {
-        flex-direction: column;
-    }
-
     .contact-item {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .contact-item p {
-        font-size: 16px;
+    .contact-info-box {
+        padding: 20px;
+        width: 100%;
     }
 
-    /* Map Section */
+    .contact-item p {
+        font-size: 14px;
+    }
+
     .map-section iframe {
-        height: 300px;
+        height: 250px; /* Reduced height for smaller screens */
     }
 
     .map-button-section button {
-        font-size: 14px;
-        padding: 10px 20px;
+        font-size: 14px; /* Smaller button text on mobile */
+    }
+
+    .contact-item {
+        padding: 15px;
     }
 }

@@ -6,6 +6,7 @@
     border-radius: 10px;
     max-width: 800px;
     text-align: center;  /* Aligning everything to the left */
+    width: 100%;  /* Ensure it does not overflow */
 }
 
 /* Contact Information Box using Flexbox */
@@ -17,7 +18,7 @@
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 600px;  /* Same width as map */
+    width: 100%;  /* Ensure it doesn't exceed the container's width */
     margin: 0 auto 30px;  /* Centered with margin below */
     box-sizing: border-box;
     font-size: 18px;
@@ -29,15 +30,6 @@
     justify-content: space-between; /* Push the button to the right */
     width: 100%;  /* Ensure full width for contact items */
     margin-bottom: 15px;
-}
-
-.yellow {
-    color:#f1c232;
-}
-
-.contact-item p {
-    margin: 0;
-    padding-right: 10px;  /* Add space between label and content */
 }
 
 /* Fix to ensure all contact items are aligned properly */
@@ -72,6 +64,8 @@
 /* Map Section */
 .map-section {
     margin-top: 30px;
+    max-width: 100%;  /* Ensure the map fits within the container */
+    width: 100%;  /* Ensure it does not overflow */
 }
 
 button {
@@ -96,50 +90,44 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/* Media Queries for Mobile and Tablets */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
-    /* Adjust Contact Info Box width */
-    .contact-info-box {
-        width: 100%;
+    /* Adjust the container width to fit within mobile screens */
+    .contact-details-section {
+        max-width: 100%;
         padding: 15px;
     }
 
-    /* Reduce font size for better readability on mobile */
-    .contact-item p {
-        font-size: 16px;
+    .contact-info-box {
+        width: 100%;
     }
 
-    /* Adjust button font size and spacing */
-    .copy-button {
-        font-size: 14px;
-        padding: 4px 8px;
+    .map-section iframe {
+        width: 100%; /* Make map full-width on mobile */
+        height: 200px; /* Adjust map height for better mobile view */
     }
 
-    /* Stack the contact items vertically */
+    #Contact_Details {
+        font-size: 28px; /* Smaller title on mobile */
+    }
+
     .contact-item {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Stack contact details vertically on mobile */
+        align-items: flex-start; /* Align items to the left */
         margin-bottom: 10px;
     }
 
     .contact-item p {
-        margin-bottom: 5px;
+        font-size: 16px; /* Smaller text size for mobile */
     }
 
-    /* Adjust map size */
-    .map-section iframe {
-        width: 100%;
-        height: 250px;
+    .copy-button {
+        padding: 8px 15px; /* Adjust button padding for mobile */
+        font-size: 14px;
     }
 
-    /* Adjust title size */
-    #Contact_Details {
-        font-size: 28px;
-    }
-
-    /* Adjust button size for mobile */
     button {
-        font-size: 16px;
-        padding: 8px 16px;
+        font-size: 16px; /* Adjust button text size for mobile */
+        padding: 8px 15px; /* Adjust padding for mobile */
     }
 }

@@ -22,8 +22,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start; /* Left align the entire contact box */
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .contact-item {
@@ -42,7 +43,7 @@
     font-size: 18px;
     color: #333;
     flex: 1; /* Let the text take up available space */
-    text-align: left; /* Align phone number text to the left */
+    text-align: left; /* Ensure the text is left-aligned */
 }
 
 .yellow {

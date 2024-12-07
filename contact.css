@@ -32,7 +32,7 @@
 }
 
 .yellow {
-    color:#f1c232;
+    color: #f1c232;
 }
 
 .contact-item p {
@@ -62,6 +62,13 @@
     color: white;
 }
 
+.copy-feedback {
+    color: #00ff00;
+    font-size: 16px;
+    margin-top: 5px;
+    display: none;
+}
+
 /* Map Section */
 .map-section {
     margin-top: 30px;
@@ -87,9 +94,26 @@ button:hover {
     background-color: #f1c232;  /* Soft gold on hover */
 }
 
+/* Contact Details Title */
 #Contact_Details {
     font-size: 36px;
     color: #006f6d; /* Deep teal for title */
     font-weight: 700;
     margin-bottom: 20px;
+}
+
+/* Footer */
+#footer {
+    margin-top: 40px;
+    text-align: center;
+    background-color: #006f6d;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer p {
+    margin: 0;
 }

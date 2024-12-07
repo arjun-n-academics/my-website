@@ -183,6 +183,11 @@ body, html {
     font-weight: 400;
 }
 
+#Contact_Details{
+    
+}
+
+
 /* Media Queries for Mobile and Tablets */
 @media (max-width: 768px) {
     .contact-item {

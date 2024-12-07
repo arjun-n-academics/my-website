@@ -31,14 +31,12 @@
     justify-content: flex-start; /* Align the content to the left */
     width: 100%;  /* Ensure full width for contact items */
     margin-bottom: 15px;
-    align-items: center;  /* Align text and button vertically */
 }
 
 /* Styling for the label of the contact fields */
 .contact-item p {
     margin: 0;
     padding-right: 10px;  /* Add space between label and content */
-    flex-grow: 1; /* Ensure that text takes up remaining space */
 }
 
 /* Fix to ensure all contact items are aligned properly */

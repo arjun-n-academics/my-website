@@ -4,7 +4,7 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    max-width: 100%;  /* Prevents overflow */
+    max-width: 100%;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
@@ -63,12 +63,15 @@
 /* Map Section */
 .map-section {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
 .map-section iframe {
-    width: 100%;  /* Ensure iframe is fully responsive */
-    max-width: 600px;  /* Limit the width on larger screens */
+    width: 100%; /* Ensure iframe takes full width of its container */
+    max-width: 600px; /* Maximum width of map */
     height: 350px;
     border: 0;
 }
@@ -87,8 +90,8 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%;  /* Full width on mobile */
-    box-sizing: border-box;  /* Ensures padding doesn't affect width */
+    width: 100%; /* Full width on mobile */
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -160,3 +163,29 @@ button:hover {
     }
 }
 
+/* Flexbox Container to Align Map and Info Together */
+.contact-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px; /* Space between the map and info box */
+    align-items: flex-start;
+}
+
+/* Make sure both map and contact info are equally responsive */
+.contact-details-container .contact-info-box,
+.contact-details-container .map-section {
+    flex: 1; /* Both will take equal space */
+}
+
+/* Ensuring the map and contact info don't exceed screen size */
+@media (max-width: 768px) {
+    .contact-details-container {
+        flex-direction: column; /* Stack map and info box vertically on mobile */
+    }
+
+    .contact-details-container .contact-info-box,
+    .contact-details-container .map-section {
+        width: 100%;  /* Ensure full width on small screens */
+    }
+}

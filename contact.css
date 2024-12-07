@@ -22,28 +22,41 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: flex-start; /* Left align the entire contact box */
+    align-items: center;
     margin-bottom: 40px;
     width: 100%;
 }
 
 .contact-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 700px; /* Limiting width for better layout */
-    padding: 15px 25px;
+    max-width: 800px;
+    padding: 15px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: space-between; /* Align button to the right */
 }
 
-.contact-item p {
+.field, .details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.field p {
     font-size: 18px;
     color: #333;
-    flex: 1; /* Let the text take up available space */
-    text-align: left; /* Ensure the text is left-aligned */
+    margin: 0;
+}
+
+.details p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    flex: 1;
 }
 
 .yellow {
@@ -126,6 +139,18 @@
         text-align: left; /* Ensures left-alignment on mobile */
     }
 
+    .field, .details {
+        width: 100%;
+    }
+
+    .field p {
+        margin-right: 10px; /* Space between label and detail */
+    }
+
+    .copy-button {
+        margin-left: auto; /* Ensure button is aligned to the right */
+    }
+
     .contact-info-box {
         padding: 20px;
         width: 100%;
@@ -133,10 +158,6 @@
 
     .contact-item p {
         font-size: 16px;
-    }
-
-    .copy-button {
-        margin-left: auto; /* Ensure button is aligned to the right */
     }
 
     .map-section iframe {

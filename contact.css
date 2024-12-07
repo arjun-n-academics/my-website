@@ -5,7 +5,8 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     max-width: 800px;
-    text-align: center;  /* Aligning everything to the center */
+    text-align: center;
+    width: 100%; /* Ensures full width for mobile responsiveness */
 }
 
 /* Contact Information Box using Flexbox */
@@ -17,7 +18,8 @@
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 100%;  /* Full width for responsiveness */
+    width: 100%;  /* Ensure it matches the width of the footer */
+    max-width: 800px; /* Same width as the footer */
     margin: 0 auto 30px;  /* Centered with margin below */
     box-sizing: border-box;
     font-size: 18px;
@@ -29,13 +31,9 @@
     justify-content: space-between; /* Push the button to the right */
     width: 100%;  /* Ensure full width for contact items */
     margin-bottom: 15px;
-    align-items: center; /* Ensure items align horizontally */
 }
 
-.yellow {
-    color:#f1c232;
-}
-
+/* Styling for the label of the contact fields */
 .contact-item p {
     margin: 0;
     padding-right: 10px;  /* Add space between label and content */
@@ -63,18 +61,23 @@
     color: white;
 }
 
+.copy-feedback {
+    color: #00ff00;
+    font-size: 16px;
+    margin-top: 5px;
+    display: none;
+}
+
 /* Map Section */
 .map-section {
     margin-top: 30px;
+    width: 100%; /* Ensures map is responsive */
+    max-width: 800px; /* Match map width with contact section */
+    margin: 0 auto;
 }
 
-.map-section iframe {
-    width: 100%; /* Makes the map responsive */
-    height: 300px; /* Fixed height for map */
-    border: 0;
-}
-
-button {
+/* Styling for the Map Button */
+.map-section button {
     padding: 10px 20px;
     background-color: #006f6d;
     color: #fff;
@@ -85,7 +88,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.map-section button:hover {
     background-color: #f1c232;  /* Soft gold on hover */
 }
 

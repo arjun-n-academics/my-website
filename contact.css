@@ -55,7 +55,7 @@
     color: #333;
     margin: 0;
     flex: 1;
-    margin-left: 15px; /* Adjust this value to control the space between field and details */
+    text-align: left; /* Ensures that the details text is left-aligned */
 }
 
 .yellow {

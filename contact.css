@@ -8,42 +8,40 @@
 
 /* Body and HTML setup */
 body, html {
-    height: 100%; /* Ensures the body takes up full height */
-    background-color: #f9f9f9; /* Lighter, cleaner background */
+    height: 100%;
+    background-color: #f4f4f4; /* Lighter background for a softer look */
     display: flex;
-    flex-direction: column; /* Makes the page layout vertical */
+    flex-direction: column;
 }
 
-/* Main wrapper */
+/* Main wrapper: Ensures content takes up all space without pushing footer inside */
 #main-wrapper {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Fills available space to push the footer down */
+    flex-grow: 1;
 }
 
 /* Header */
 #main-header {
-    background-color: #006f6d; /* Deep teal for a fresh look */
-    color: #fff; /* White text for contrast */
-    padding: 60px 20px; /* More spacious header */
+    background-color: #006f6d; /* Fresh teal */
+    color: #fff;
+    padding: 60px 20px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for more contrast */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Deep shadow for a stronger effect */
     position: relative;
 }
 
 #header-title {
-    font-size: 50px; /* Slightly larger title */
-    font-weight: 700; /* Bold title */
-    letter-spacing: 1px; /* Tighten letter-spacing */
+    font-size: 50px;
+    font-weight: 700;
     margin-bottom: 10px;
-    text-transform: uppercase; /* Make the title more impactful */
+    letter-spacing: 2px;
 }
 
 #header-tagline {
-    font-size: 24px; /* Slightly larger tagline */
-    font-weight: 300; /* Light weight for tagline */
-    color: #f1c232; /* Soft gold */
-    margin-bottom: 30px; /* Increase space between title and navigation */
+    font-size: 24px;
+    color: #f1c232; /* Warm gold for a welcoming feel */
+    margin-bottom: 20px;
 }
 
 /* Navigation */
@@ -55,24 +53,24 @@ body, html {
 
 #main-nav a {
     text-decoration: none;
-    color: #fff; /* White links */
+    color: #fff;
     font-size: 18px;
-    font-weight: 600; /* Semi-bold text */
-    padding: 12px 24px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Active and Hover States */
+/* Hover & Active States */
 #main-nav a:hover {
-    background-color: #f1c232; /* Soft gold on hover */
-    color: #006f6d; /* Dark teal text on hover */
-    transform: translateY(-3px); /* Slight hover lift effect */
+    background-color: #f1c232; /* Gold on hover */
+    color: #006f6d;
+    transform: scale(1.05);
 }
 
 #main-nav a.active {
-    background-color: #f1c232; /* Active state background */
-    color: #006f6d; /* Dark teal text */
+    background-color: #f1c232;
+    color: #006f6d;
     font-weight: 700;
 }
 
@@ -80,19 +78,18 @@ body, html {
 .contact-details-section {
     padding: 30px;
     background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 30px auto;
     text-align: center;
-    font-size: 18px; /* Improve readability */
 }
 
 /* Contact Info Box */
 .contact-info-box {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
     margin-bottom: 30px;
 }
@@ -100,71 +97,67 @@ body, html {
 .contact-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    max-width: 700px; /* More space for the contact info */
+    max-width: 650px;
     padding: 15px 25px;
     background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.contact-item:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated hover effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* Space between text and button */
 }
 
 .contact-item p {
     font-size: 18px;
     color: #333;
-    flex: 1; /* Let the text take up available space */
+    flex: 1;
 }
 
 .yellow {
-    color: #f1c232; /* Soft gold color for labels */
+    color: #f1c232;
 }
 
 .copy-button {
-    background-color: #006f6d; /* Deep teal background */
-    color: #fff; /* White text */
+    background-color: #006f6d;
+    color: #fff;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .copy-button:hover {
-    background-color: #f1c232; /* Soft gold on hover */
+    background-color: #f1c232;
     color: #006f6d;
+    transform: scale(1.05);
 }
 
 /* Map Section */
 .map-section {
     margin-bottom: 30px;
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
 .map-section iframe {
     width: 100%;
-    height: 400px; /* Slightly taller map for better visibility */
+    height: 400px; /* Slightly larger map area */
     border: 0;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 /* Button for Viewing on Google Maps */
 .map-button-section button {
-    background-color: #f1c232; /* Soft gold */
+    background-color: #f1c232;
     color: #006f6d;
     border: none;
-    padding: 14px 28px;
+    padding: 15px 30px;
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 25px;
 }
 
@@ -180,46 +173,57 @@ body, html {
     color: #fff;
     text-align: center;
     padding: 25px;
-    font-size: 16px;
-    position: relative; /* Allows footer to be positioned at the bottom of the page */
+    font-size: 14px;
+    position: relative;
     width: 100%;
+    margin-top: auto; /* Ensures footer stays at the bottom */
 }
 
 #footer p {
     margin: 0;
-    font-weight: 400;
 }
 
-/* Contact Title */
+/* Title Styling */
 #Contact_Details {
     font-size: 40px;
-    color: #006f6d; /* Deep teal for title */
+    color: #006f6d;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 /* Media Queries for Mobile and Tablets */
 @media (max-width: 768px) {
-    .contact-item {
+    #header-title {
+        font-size: 40px; /* Smaller title */
+    }
+
+    #header-tagline {
+        font-size: 20px;
+    }
+
+    #main-nav {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+    }
+
+    #main-nav a {
+        font-size: 16px;
+        padding: 10px;
     }
 
     .contact-info-box {
-        width: 100%;
         padding: 20px;
+        width: 100%;
     }
 
     .contact-item p {
-        font-size: 16px; /* Slightly smaller text */
+        font-size: 14px;
     }
 
     .map-section iframe {
-        height: 300px; /* Reduced height for smaller screens */
+        height: 300px;
     }
 
     .map-button-section button {
-        font-size: 16px; /* Smaller button text on mobile */
+        font-size: 16px;
     }
 }
